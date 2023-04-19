@@ -1,17 +1,19 @@
 <!-- nav bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="main-navbar">
   <a class="navbar-brand" style="color:white;">Employee Manager</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
     aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <!-- add new employee -->
   <div class="collapse navbar-collapse" id="navbarColor02">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">Add Employee <span
+        <a class="nav-link" (click)="onOpenModal(defaultEmployee, 'add')">Add Employee <span
             class="sr-only">(current)</span></a>
       </li>
     </ul>
+    <!-- search employee -->
     <form class="form-inline my-2 my-lg-0">
       <input type="search" name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..."
         required>
@@ -20,7 +22,7 @@
 </nav>
 
 <!-- main container -->
-<div class="container">
+<div class="container" id="main-container">
   <div class="row">
     <div class="col-md-6 col-xl-3">
       <!-- employee info cards -->
@@ -41,10 +43,10 @@
         </ul>
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
-            <a href="#" class="btn btn-primary tooltips" data-placement="top" data-bs-toggle="modal"
-              data-original-title="Edit" data-bs-target="#updateEmployeeModal"><i class="fa fa-pencil"></i> </a>
-            <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-bs-toggle="modal"
-              data-original-title="Delete" data-bs-target="#deleteEmployeeModal"><i class="fa fa-times"></i></a>
+            <a (click)="onOpenModal(employee, 'edit')" href="#" class="btn btn-primary tooltips" data-placement="top"
+              data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+            <a (click)="onOpenModal(employee, 'delete')" href="#" class="btn btn-secondary tooltips" data-placement="top"
+              data-original-title="Delete"><i class="fa fa-times"></i></a>
           </div>
         </div>
       </div>

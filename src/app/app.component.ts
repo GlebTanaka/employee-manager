@@ -11,9 +11,19 @@ import { HttpErrorResponse } from '@angular/common/http';
 export class AppComponent implements OnInit {
   title = 'employee-manager';
   public employees: Employee[];
+  public defaultEmployee: Employee;
 
   constructor(private employeeServie: EmployeeService) {
     this.employees = [];
+    this.defaultEmployee = {
+      id: 0,
+      name: '',
+      email: '',
+      jobTitle: '',
+      phone: '',
+      imageUrl: '',
+      employeeCode: '',
+    }
   }
 
   ngOnInit(): void {
@@ -39,7 +49,7 @@ export class AppComponent implements OnInit {
     button.setAttribute('data-bs-toggle', 'modal'); // set the attribute to a modal
     // check the parameter mode to trigger the right modal popup
     if (mode === 'add') {
-      button.setAttribute('data-bs-target', '#udpateEmployeeModal')
+      button.setAttribute('data-bs-target', '#addEmployeeModal')
     }
     if (mode === 'edit') {
       button.setAttribute('data-bs-target', '#updateEmployeeModal');
