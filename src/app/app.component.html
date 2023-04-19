@@ -35,15 +35,16 @@
           </div>
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a href="#">{{employee?.email}}</a></li>
+          <li class="list-group-item"><i class="fa fa-envelope float-right"></i>Email : <a
+              href="#">{{employee?.email}}</a></li>
           <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{employee?.phone}}</li>
         </ul>
         <div class="card-body">
           <div class="float-right btn-group btn-group-sm">
-            <a href="#" class="btn btn-primary tooltips" data-placement="top" data-bs-toggle="tooltip" data-bs-target="#updateEmployeeModal"
-              data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-            <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-bs-toggle="tooltip" data-bs-target="#deleteEmployeeModal"
-              data-original-title="Delete"><i class="fa fa-times"></i></a>
+            <a href="#" class="btn btn-primary tooltips" data-placement="top" data-bs-toggle="modal"
+              data-original-title="Edit" data-bs-target="#updateEmployeeModal"><i class="fa fa-pencil"></i> </a>
+            <a href="#" class="btn btn-secondary tooltips" data-placement="top" data-bs-toggle="modal"
+              data-original-title="Delete" data-bs-target="#deleteEmployeeModal"><i class="fa fa-times"></i></a>
           </div>
         </div>
       </div>
@@ -74,8 +75,7 @@
           </div>
           <div class="form-group">
             <label for="phone">Job title</label>
-            <input type="text" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title"
-              required>
+            <input type="text" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title" required>
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
@@ -83,11 +83,11 @@
           </div>
           <div class="form-group">
             <label for="phone">Image URL</label>
-            <input type="text" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL"
-              required>
+            <input type="text" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL" required>
           </div>
           <div class="modal-footer">
-            <button type="button" id="add-employee-form" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" id="add-employee-form" class="btn btn-secondary"
+              data-bs-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
         </form>
@@ -111,32 +111,26 @@
         <form>
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text"  name="name" class="form-control" id="name"
-              aria-describedby="emailHelp" placeholder="Name">
+            <input type="text" name="name" class="form-control" id="name" aria-describedby="emailHelp"
+              placeholder="Name">
           </div>
-          <input type="hidden" name="id" class="form-control" id="id"
-            placeholder="Email">
-          <input type="hidden" name="userCode" class="form-control"
-            id="userCode" placeholder="Email">
+          <input type="hidden" name="id" class="form-control" id="id" placeholder="Email">
+          <input type="hidden" name="userCode" class="form-control" id="userCode" placeholder="Email">
           <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" name="email" class="form-control" id="email"
-              placeholder="Email">
+            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
           </div>
           <div class="form-group">
             <label for="phone">Job title</label>
-            <input type="text"  name="jobTitle" class="form-control" id="jobTitle"
-              placeholder="Job title">
+            <input type="text" name="jobTitle" class="form-control" id="jobTitle" placeholder="Job title">
           </div>
           <div class="form-group">
             <label for="phone">Phone</label>
-            <input type="text" name="phone" class="form-control" id="phone"
-              name="phone" placeholder="Phone">
+            <input type="text" name="phone" class="form-control" id="phone" name="phone" placeholder="Phone">
           </div>
           <div class="form-group">
             <label for="phone">Image URL</label>
-            <input type="text" name="imageUrl" class="form-control" id="imageUrl"
-              placeholder="Image URL">
+            <input type="text" name="imageUrl" class="form-control" id="imageUrl" placeholder="Image URL">
           </div>
           <div class="modal-footer">
             <button type="button" id="" data-bs-dismiss="modal" class="btn btn-secondary">Close</button>
