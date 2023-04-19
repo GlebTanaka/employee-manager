@@ -30,4 +30,25 @@ export class AppComponent implements OnInit {
       }
     });
   }
+
+  public onOpenModal(emloyee: Employee, mode: string): void { // takes an Employee object and string 
+    const container = document.getElementById('main-container') // getting our container
+    const button = document.createElement('button'); // adding a button to the container
+    button.type = 'button'; 
+    button.style.display = 'none'; // nake it invisible
+    button.setAttribute('data-bs-toggle', 'modal'); // set the attribute to a modal
+    // check the parameter mode to trigger the right modal popup
+    if (mode === 'add') {
+      button.setAttribute('data-bs-target', '#udpateEmployeeModal')
+    }
+    if (mode === 'edit') {
+      button.setAttribute('data-bs-target', '#updateEmployeeModal');
+    }
+    if (mode === 'delete') {
+      button.setAttribute('data-bs-target', '#deleteEmployeeModal');
+    }
+
+    container?.appendChild(button); // add button to our main container
+    button.click(); // call a cklick on the button
+  }
 }
